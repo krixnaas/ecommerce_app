@@ -1,3 +1,4 @@
+import 'package:app/features/authentication/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +22,7 @@ class OnBoardingController extends GetxController {
   void nextPage() {
     print(currentPageIndex.value);
     if (currentPageIndex.value == 2) {
-      //Login Screen
+      Get.offAll(LoginScreen(), transition: Transition.rightToLeft, duration: Duration(milliseconds: 500));
     } else {
       int page = currentPageIndex.value + 1;
       pageController.animateToPage(
