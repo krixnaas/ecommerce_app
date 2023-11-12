@@ -1,3 +1,4 @@
+import 'package:app/features/authentication/screens/signup/verify_email.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:app/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -97,7 +98,7 @@ class SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const VerifyEmailScreen()),
                 child: Text(TextString.signupTitle.capitalize!)),
           ),
           const SizedBox(height: Sizes.spaceBetweenItems),
