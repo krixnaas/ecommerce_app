@@ -1,5 +1,6 @@
 import 'package:app/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:app/features/authentication/screens/signup/singup.dart';
+import 'package:app/navigation_menu.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:app/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +65,8 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: Text(TextString.signIn.capitalize!)),
+                  onPressed: () => Get.to(() => const NavigationMenu()),
+                  child: Text(TextString.signIn.capitalize!)),
             ),
             const SizedBox(height: Sizes.spaceBetweenItems),
             //Create New Account
