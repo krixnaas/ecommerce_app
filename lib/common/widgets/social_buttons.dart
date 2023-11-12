@@ -1,4 +1,3 @@
-
 import 'package:app/utils/constants/colors.dart';
 import 'package:app/utils/constants/image_strings.dart';
 import 'package:app/utils/constants/sizes.dart';
@@ -15,27 +14,27 @@ class SocialButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          decoration: BoxDecoration(border: Border.all(color: AppColors.grey), borderRadius: BorderRadius.circular(100)),
+          decoration: BoxDecoration(
+              border: Border.all(color: AppColors.grey),
+              borderRadius: BorderRadius.circular(100)),
           child: IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: const Image(
                   width: Sizes.iconMd,
                   height: Sizes.iconMd,
-                  image: AssetImage(ImageString.google)
-              )
-          ),
+                  image: AssetImage(ImageString.google))),
         ),
-        const SizedBox(height: Sizes.spaceBetweenSections),
+        const SizedBox(width: Sizes.spaceBetweenItems),
         Container(
-          decoration: BoxDecoration(border: Border.all(color: AppColors.grey), borderRadius: BorderRadius.circular(100)),
+          decoration: BoxDecoration(
+              border: Border.all(color: AppColors.grey),
+              borderRadius: BorderRadius.circular(100)),
           child: IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: const Image(
                   width: Sizes.iconMd,
                   height: Sizes.iconMd,
-                  image: AssetImage(ImageString.facebook)
-              )
-          ),
+                  image: AssetImage(ImageString.facebook))),
         ),
       ],
     );

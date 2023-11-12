@@ -1,7 +1,8 @@
-
+import 'package:app/features/authentication/screens/signup/singup.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:app/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginForm extends StatelessWidget {
@@ -13,7 +14,8 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: Sizes.spaceBetweenSections),
+        padding:
+            const EdgeInsets.symmetric(vertical: Sizes.spaceBetweenSections),
         child: Column(
           children: [
             TextFormField(
@@ -38,9 +40,13 @@ class LoginForm extends StatelessWidget {
                 //Remember Me
                 Row(
                   children: [
-                    Checkbox(
-                      value: true,
-                      onChanged: (value) {},
+                    SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: Checkbox(
+                        value: true,
+                        onChanged: (value) {},
+                      ),
                     ),
                     const Text(TextString.rememberMe),
                   ],
@@ -57,16 +63,19 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(TextString.signIn)),
+                  onPressed: () {}, child: Text(TextString.signIn.capitalize!)),
             ),
             const SizedBox(height: Sizes.spaceBetweenItems),
             //Create New Account
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {},
-                  child: const Text(TextString.signupTitle)),
+                  onPressed: () {
+                    Get.to(const SignupScreen(),
+                        transition: Transition.rightToLeft,
+                        duration: const Duration(milliseconds: 500));
+                  },
+                  child: const Text(TextString.createAccount)),
             ),
             const SizedBox(height: Sizes.spaceBetweenItems),
           ],
