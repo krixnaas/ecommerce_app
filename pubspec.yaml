@@ -56,6 +56,7 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/on_boarding_images/
     - assets/images/animations/
+    - assets/images/banners/
     - assets/icons/
     - assets/logos/
     
