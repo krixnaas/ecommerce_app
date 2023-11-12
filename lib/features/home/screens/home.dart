@@ -27,6 +27,7 @@ class HomeScreen extends StatelessWidget {
           headerSliverBuilder: (_, innerBoxIsScrolled) {
             return [
               SliverAppBar(
+                automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
                 backgroundColor: HelperFunctions.isDarkMode(context)
@@ -58,9 +59,9 @@ class HomeScreen extends StatelessWidget {
                   tabs: [
                     Tab(child: Text('Rooms')),
                     Tab(child: Text('Jobs')),
+                    Tab(child: Text('Report Hub')),
                     Tab(child: Text('Lost & Found')),
                     Tab(child: Text('Patro')),
-                    Tab(child: Text('Report Hub')),
                   ],
                 ),
               ),
@@ -72,6 +73,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(Sizes.defaultSpace),
                 child: Column(
                   children: const [
+                    Tab(child: Text('Rooms')),
                     //Rooms
                     //Jobs
                     //Lost & Found
@@ -81,6 +83,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               )
             ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Handle FAB tap event
+          },
+          backgroundColor: Colors.blue, // Customize FAB color
+          shape: RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.circular(30.0), // Set desired circularity
           ),
         ),
       ),

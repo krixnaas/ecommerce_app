@@ -2,9 +2,11 @@ import 'package:app/common/widgets/app_bar.dart';
 import 'package:app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:app/common/widgets/primary_header_container.dart';
 import 'package:app/common/widgets/section_heading.dart';
+import 'package:app/features/personalization/screens/profile/profile.dart';
 import 'package:app/utils/constants/colors.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'widgets/user_profile.dart';
@@ -33,7 +35,8 @@ class SettingScreen extends StatelessWidget {
                   ),
 
                   //User Profile Card
-                  const UserProfile(),
+                  UserProfile(
+                      onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(height: Sizes.spaceBetweenSections),
                 ],
               ),
