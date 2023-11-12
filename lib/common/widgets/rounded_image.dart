@@ -15,19 +15,19 @@ class RoundedImage extends StatelessWidget {
     this.isNetworkImage = false,
     this.borderRadius = Sizes.md,
     this.applyImageRadius = false,
-    this.backgroundColor = AppColors.light,
+    this.backgroundColor,
   });
 
   final double? width, height;
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;
   final VoidCallback? onPressed;
   final double borderRadius;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
