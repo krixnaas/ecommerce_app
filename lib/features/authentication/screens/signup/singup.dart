@@ -2,7 +2,6 @@ import 'package:app/common/widgets/form_divider.dart';
 import 'package:app/common/widgets/social_buttons.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:app/utils/constants/text_strings.dart';
-import 'package:app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
