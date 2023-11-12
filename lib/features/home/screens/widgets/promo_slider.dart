@@ -2,7 +2,6 @@ import 'package:app/common/widgets/circular_container.dart';
 import 'package:app/common/widgets/rounded_image.dart';
 import 'package:app/features/home/controllers/home_controller.dart';
 import 'package:app/utils/constants/colors.dart';
-import 'package:app/utils/constants/image_strings.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
