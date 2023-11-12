@@ -1,5 +1,6 @@
+import 'package:app/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
-import 'widgets/home_app_bar.dart';
+import 'widgets/promo_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,10 +8,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            HomeAppBar(),
+          children: const [
+            //Carousel
+            PromoSlider(
+              banners: [
+                ImageString.promoBanner1,
+                ImageString.promoBanner2,
+                ImageString.promoBanner3,
+              ],
+            ),
           ],
         ),
       ),
