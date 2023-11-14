@@ -1,5 +1,5 @@
 import 'package:app/common/widgets/app_bar.dart';
-import 'package:app/common/widgets/circular_image.dart';
+import 'package:app/common/widgets/image/circular_image.dart';
 import 'package:app/common/widgets/section_heading.dart';
 import 'package:app/utils/constants/image_strings.dart';
 import 'package:app/utils/constants/sizes.dart';

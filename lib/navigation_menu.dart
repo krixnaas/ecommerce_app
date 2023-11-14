@@ -1,5 +1,6 @@
 import 'package:app/features/home/screens/home.dart';
 import 'package:app/features/personalization/screens/settings/settings.dart';
+import 'package:app/features/services/screens/services.dart';
 import 'package:app/utils/constants/colors.dart';
 import 'package:app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,8 @@ class NavigationMenu extends StatelessWidget {
           backgroundColor: isDarkMode ? AppColors.black : AppColors.light,
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
+            NavigationDestination(
+                icon: Icon(Iconsax.category), label: 'Services'),
             NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile')
           ],
         ),
@@ -38,6 +41,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
+    const ServiceScreen(),
     const SettingScreen(),
   ];
 }

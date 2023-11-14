@@ -2,14 +2,12 @@ import 'package:app/utils/constants/colors.dart';
 import 'package:app/utils/constants/sizes.dart';
 import 'package:app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class CustomCicularImage extends StatelessWidget {
   const CustomCicularImage({
     super.key,
-    this.width = 56,
-    this.height = 56,
+    this.width = 58,
+    this.height = 58,
     this.overlayColor,
     required this.image,
     this.backgroundColor,
@@ -41,6 +39,9 @@ class CustomCicularImage extends StatelessWidget {
           image: isNetworkImage
               ? NetworkImage(image)
               : AssetImage(image) as ImageProvider,
+          color: HelperFunctions.isDarkMode(context)
+              ? AppColors.white
+              : AppColors.dark,
         ),
       ),
     );

@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
             'Home',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
+          showBackArrow: false,
           actions: [CounterIcon(onPressed: () {})],
         ),
         body: NestedScrollView(
